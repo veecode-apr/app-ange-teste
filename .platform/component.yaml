@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: app-ange-teste
+  description: "app-ange-teste"
+  annotations:
+    github.com/project-slug: veecode-apr/app-ange-teste
+    backstage.io/techdocs-ref: dir:..
+    backstage.io/kubernetes-id: "app-ange-teste"
+    vault.io/secrets-path: "app-ange-teste"
+    grafana/dashboard-selector: "app-ange-teste"
+    grafana/alert-label-selector: "alertname=app-ange-teste"
+    argocd/proxy-url: '/argocd/api'
+    argocd/app-name: "app-ange-teste"
+    kong-manager/service-name: veecode-apr.app-ange-teste-service-0.8080
+    kong-manager/instance: /kong-manager/api
+spec:
+  type: service
+  lifecycle: experimental
+  owner: "group:default/admin"
